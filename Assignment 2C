@@ -1,0 +1,37 @@
+.html
+<h1>{{title}}</h1>
+<form (ngSubmit)="getvalue(name.value, email.value, contact.value, address.value)">
+<input type="text" #name placeholder="Enter Name" name="name"><br><br>
+<input type="text" #email placeholder="Enter Email" name="email"><br><br>
+<input type="text" #contact placeholder="Enter Contact Number" name="contact"><br><br>
+<input type="text" #address placeholder="Enter Address" name="address"><br><br>
+<button type="submit">Register</button>
+</form>
+<h1>Your Registered Data</h1><br>
+<p>Name: {{displayname}}</p>
+<p>Email: {{displayemail}}</p>
+<p>Contact: {{displaycontact}}</p>
+<p>Address: {{displayaddress}}</p>
+
+.ts
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+@Component({
+selector: 'app-root',
+imports: [RouterOutlet],
+templateUrl: './app.component.html',
+styleUrl: './app.component.css'
+})
+export class AppComponent {
+title = 'part-c';
+displayname='';
+displayemail='';
+displaycontact='';
+displayaddress='';
+getvalue(name: string, email: string, contact: string, address: string): void {
+this.displayname = name;
+this.displayemail = email;
+this.displaycontact = contact;
+this.displayaddress = address;
+}
+}
