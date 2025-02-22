@@ -1,0 +1,57 @@
+# Lab Assignment 2A
+Problem: Create version control account on GitHub and using Git commands to create repository and push
+your code to GitHub.
+
+$ git init
+Initialized empty Git repository in C:/Users/shrut/OneDrive/Desktop/Assignment-2B/FlowersShop_website/.git/
+
+$ git add .
+
+shrut@DESKTOP-5NAGKME MINGW64 /c/users/shrut/oneDrive/Desktop/Assignment-2B/flowersShop_website (main)
+$ git commit -m "Initial commit"
+[main (root-commit) 4caeb23] Initial commit
+ 18 files changed, 1004 insertions(+)
+ create mode 100644 Index.html
+ create mode 100644 Style.css
+ create mode 100644 contact_img.jpeg
+ create mode 100644 home.webp
+ create mode 100644 img1.webp
+ create mode 100644 img2.webp
+ create mode 100644 img3.webp
+ create mode 100644 img4.webp
+ create mode 100644 img5.avif
+ create mode 100644 img6.jpg
+ create mode 100644 img7.webp
+ create mode 100644 img8.avif
+ create mode 100644 img9.jpg
+ create mode 100644 payment_img.jpg
+ create mode 100644 pic1.jpg
+ create mode 100644 pic2.webp
+ create mode 100644 pic3.avif
+ create mode 100644 video.mp4
+
+shrut@DESKTOP-5NAGKME MINGW64 /c/users/shrut/oneDrive/Desktop/Assignment-2B/flowersShop_website (main)
+$ git remote add origin https://github.com/shrutibhoi04/WAD.git
+
+shrut@DESKTOP-5NAGKME MINGW64 /c/users/shrut/oneDrive/Desktop/Assignment-2B/flowersShop_website (main)
+$ git branch -M main
+git push -u origin main
+Enumerating objects: 20, done.
+Counting objects: 100% (20/20), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (20/20), done.
+Writing objects:  95% (19/20)
+Writing objects: 100% (20/20), 13.00 MiB | 4.48 MiB/s, done.
+Total 20 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/shrutibhoi04/WAD.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+$ git remote add origin https://github.com/shrutibhoi04/WAD.git
+git branch -M main
+git push -u origin main
+error: remote origin already exists.
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+
