@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Mobile Site</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery and jQuery Mobile CDN -->
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  <style>
+    body {
+      background-color: #e0f7fa; /* Light teal background */
+    }
+    .custom-footer {
+      text-align: center;
+      font-size: 14px;
+      padding: 10px 0;
+    }
+    .ui-content {
+      background-color: #e0f7fa !important;
+    }
+    .success-message {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+      display: none;
+    }
+  </style>
+
+  <script>
+    $(document).ready(function() {
+      $("#contactForm").submit(function(event) {
+        event.preventDefault(); // Prevent actual form submission
+
+        // Clear form fields (optional)
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+
+        // Optionally log or display the submitted data
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Message:", message);
+
+        // Display success message
+        $("#successMessage").fadeIn();
+
+        // Clear fields
+        $("#name").val('');
+        $("#email").val('');
+        $("#message").val('');
+      });
+    });
+  </script>
+</head>
+
+<body>
+
+<!-- Home Page -->
+<div data-role="page" id="home">
+  <div data-role="header">
+    <h1>My Mobile Site</h1>
+  </div>
+
+  <div data-role="content">
+    <h2>Welcome!</h2>
+    <p>This is a simple mobile site using jQuery Mobile.</p>
+    <a href="#about" class="ui-btn ui-corner-all">About Us</a>
+    <a href="#contact" class="ui-btn ui-corner-all">Contact</a>
+  </div>
+
+  <div data-role="footer" class="custom-footer">
+    <h4>&copy; My Mobile Site</h4>
+  </div>
+</div>
+
+<!-- About Page -->
+<div data-role="page" id="about">
+  <div data-role="header" data-add-back-btn="true">
+    <h1>About Us</h1>
+  </div>
+
+  <div data-role="content">
+    <p>We build simple and effective mobile websites using jQuery Mobile.</p>
+  </div>
+
+  <div data-role="footer" class="custom-footer">
+    <h4>&copy; My Mobile Site</h4>
+  </div>
+</div>
+
+<!-- Contact Page -->
+<div data-role="page" id="contact">
+  <div data-role="header" data-add-back-btn="true">
+    <h1>Contact</h1>
+  </div>
+
+  <div data-role="content">
+    <form id="contactForm">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" required>
+
+      <label for="message">Message:</label>
+      <textarea name="message" id="message" required></textarea>
+
+      <input type="submit" value="Submit" class="ui-btn ui-corner-all">
+    </form>
+    <div id="successMessage" class="success-message">
+      Your data has been submitted successfully.
+    </div>
+  </div>
+
+  <div data-role="footer" class="custom-footer">
+    <h4>My Mobile Site</h4>
+  </div>
+</div>
+
+</body>
+</html>
