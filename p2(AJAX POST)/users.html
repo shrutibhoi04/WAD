@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Registered Users</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Registered Users</h2>
+    <ul id="userList"></ul>
+    <a href="index.html">Back to Register</a>
+  </div>
+
+  <script>
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const list = document.getElementById('userList');
+    users.forEach(user => {
+      const li = document.createElement('li');
+      li.textContent = `Name: ${user.name}, Email: ${user.email}`;
+      list.appendChild(li);
+    });
+  </script>
+</body>
+</html>
