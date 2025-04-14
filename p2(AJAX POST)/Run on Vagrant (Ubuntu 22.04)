@@ -1,0 +1,17 @@
+Run on Vagrant
+1. Start Vagrant
+  - vagrant up
+  - vagrant ssh
+Install Node.js (if not installed)
+  - sudo apt update
+  - sudo apt install nodejs npm
+Navigate to your project directory
+  - cd /vagrant/registration-app
+start the server
+  - node server.js
+Visit http://localhost:3000 for AJAX, but open index.html via your browser or Live Server in VS Code (host port forwarding may be required).
+
+
+
+
+
