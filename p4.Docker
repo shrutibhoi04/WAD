@@ -1,0 +1,28 @@
+1. docker  -v
+2. docker images
+3. docker ps
+4. docker hub
+      openjdk
+        docker pull openjdk(in cmd)
+      python
+        docker pull python
+5. docker images
+6. docker run --name JAVA -it -d openjdk
+7. docker ps
+8. docker exec -it JAVA jshell
+9. System.out.println("Hello World");
+10. int a = 10
+11. int b = 20
+12. System.out.println(a+b);
+13. docker ps
+14. /exit
+15. docker ps
+16. docker container rm id
+17. docker stop (container id)
+18. docker container rm (conatiner id)
+19. docker ps
+20. docker images
+21. docker images prune
+yes
+22. 
+
